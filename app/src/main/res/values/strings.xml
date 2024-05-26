@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FlickPic</string>
+    <string name="description">TODO</string>
+    <string name="https_www_movieposters_com">Постеры предоставлены https://www.movieposters.com/</string>
+    <string name="menu_title">Меню</string>
+    <string name="watch_later_title">Смотреть позже</string>
+    <string name="collections_title">Коллекции</string>
+    <string name="settings_title">Настройки</string>
+    <string name="favorite_title">Избранное</string>
+</resources>
