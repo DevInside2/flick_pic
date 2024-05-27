@@ -10,6 +10,6 @@
     <color name="orange">#FF6F00</color>
     <color name="violet">#D100FF</color>
     <color name="dark_violet">#5D0271</color>
-    <color name="my_light_primary">#03A14F</color>
-    <color name="my_dark_primary">#003218</color>
+    <color name="my_light_primary">#035ECD</color>
+    <color name="my_dark_primary">#000B32</color>
 </resources>
