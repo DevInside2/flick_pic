@@ -1,10 +1,56 @@
 <resources>
     <string name="app_name">FlickPic</string>
-    <string name="description">TODO</string>
+    <string name="description">description</string>
+    <string name="description2">description2</string>
+    <string name="description3">description3</string>
+    <string name="description4">description4</string>
+    <string name="description5">description5</string>
+    <string name="description6">description6</string>
+    <string name="description7">description7</string>
+    <string name="game_of_thrones_desc">Set on the fictional continents of Westeros and Essos, Game of Thrones
+        has a large ensemble cast and follows several story arcs throughout the course of the show.
+        The first major arc concerns the Iron Throne of the Seven Kingdoms of Westeros through
+        a web of political conflicts among the noble families either vying to claim the throne or
+        fighting for independence from whoever sits on it.</string>
+    <string name="the_intruder_desc">A young married couple buy a beautiful house on several acres of land,
+        only to find out that the man they bought it from refuses to let go of the property.</string>
+    <string name="the_dark_knight_rises_bane_desc">Bane was the friend and protector of Talia al Ghul and the field
+        commander of the League of Shadows. He was potent in both strategy and physical combat.
+        He defeated the Batman in combat and manipulated the citizens of Gotham City with skilled
+        oratory until Batmans recovery and return. He displayed his personality predominantly
+        through expressions in his eyes. Banes physical appearance was defined by his mask, which
+        inhibited the excruciating pain that agonized his body to bearable levels. He was portrayed
+        by Tom Hardy in The Dark Knight Rises.</string>
+    <string name="murder_on_the_orient_express_desc">A lavish trip through Europe quickly unfolds into a race against
+        time to solve a murder aboard a train. When an avalanche stops the Orient Express dead in
+        its tracks, the worlds greatest detective Hercule Poirot arrives to interrogate all
+        passengers and search for clues before the killer can strike again.</string>
+    <string name="mr_poppers_penguins_desc">Summaries. The life of a businessman begins to change after he
+        inherits six penguins, and as he transforms his apartment into a winter wonderland, his
+        professional side starts to unravel.</string>
+    <string name="madeas_witness_protection_desc">It tells the story about Madea being a host to a family
+        that the FBI has entered into the witness protection program due to the fact that the patriarch has been
+        the CFO of a company that a crime family was using to further their Ponzi schemes.</string>
+    <string name="horrible_bosses_desc">The plot follows three friends, played by Bateman, Day, and Sudeikis,
+        who decide to murder their respective overbearing, abusive bosses, portrayed by Spacey,
+        Aniston, and Farrell.</string>
+    <string name="predators_desc">A group of elite warriors parachute into an unfamiliar jungle and
+        are hunted by members of a merciless alien race. A group of elite warriors parachute into an
+        unfamiliar jungle and are hunted by members of a merciless alien race.</string>
+    <string name="moonlight_desc">A young African-American man grapples with his identity and sexuality
+        while experiencing the everyday struggles of childhood, adolescence,
+        and burgeoning adulthood.</string>
+    <string name="pixels_desc">Combining animated video game characters and visual effects, the film
+        involves an alien race misinterpreting video feeds of classic arcade games as a declaration
+        of war, to which they respond by attacking Earth with technological replicas of
+        characters from the games.</string>
     <string name="https_www_movieposters_com">Постеры предоставлены https://www.movieposters.com/</string>
     <string name="menu_title">Меню</string>
     <string name="watch_later_title">Смотреть позже</string>
     <string name="collections_title">Коллекции</string>
     <string name="settings_title">Настройки</string>
     <string name="favorite_title">Избранное</string>
+    <string name="addToFavorite">Добавить в избранное</string>
+    <string name="share">Поделиться</string>
+    <string name="addFav">Добавить в избранное</string>
 </resources>

@@ -1,8 +1,7 @@
-import com.android.build.api.dsl.ViewBinding
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("org.jetbrains.kotlin.plugin.parcelize")
 }
 
 android {
@@ -44,7 +43,8 @@ android {
 
 
 dependencies {
-
+    implementation(libs.androidx.coordinatorlayout)
+    implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.cardview)
     implementation(libs.androidx.appcompat)

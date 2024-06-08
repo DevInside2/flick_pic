@@ -8,7 +8,7 @@
         android:title="@string/menu_title"
         app:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/change_theme"
+        android:id="@+id/changeTheme"
         android:icon="@drawable/baseline_format_paint_24"
         app:showAsAction="ifRoom"
         tools:ignore="MenuTitle" />

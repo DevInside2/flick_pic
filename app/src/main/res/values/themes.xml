@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.FlickPic" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <item name="colorPrimary">@color/red</item>
-        <item name="colorPrimaryDark">@color/green</item>
+        <item name="colorPrimary">@color/dark_violet</item>
+        <item name="colorPrimaryDark">@color/my_dark_primary</item>
         <item name="colorAccent">@color/blue</item>
     </style>
 </resources>
