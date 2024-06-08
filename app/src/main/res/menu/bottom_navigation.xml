@@ -2,22 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/item_watchLater"
+        android:id="@+id/itemWatchLater"
         android:icon="@drawable/baseline_access_time_filled_24"
         android:title="@string/watch_later_title"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/item_collections"
+        android:id="@+id/itemCollections"
         android:icon="@drawable/baseline_collections_bookmark_24"
         android:title="@string/collections_title"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/item_settings"
+        android:id="@+id/itemSettings"
         android:icon="@drawable/baseline_engineering_24"
         android:title="@string/settings_title"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/item_favorite"
+        android:id="@+id/itemFavorite"
         android:icon="@drawable/baseline_favorite_24"
         android:title="@string/favorite_title"
         app:showAsAction="ifRoom" />
