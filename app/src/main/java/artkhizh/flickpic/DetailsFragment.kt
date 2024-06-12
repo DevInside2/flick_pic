@@ -1,29 +1,36 @@
 package artkhizh.flickpic
 
-import android.os.Build
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import artkhizh.flickpic.MainActivity.Companion.FILM_KEY
-import artkhizh.flickpic.databinding.ActivityDetailsBinding
+import artkhizh.flickpic.databinding.FragmentDetailsBinding
 import com.google.android.material.snackbar.Snackbar
 
-class DetailsActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityDetailsBinding
+class DetailsFragment : Fragment() {
+    private lateinit var binding: FragmentDetailsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityDetailsBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
-        val film = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            intent.getParcelableExtra(FILM_KEY, Film::class.java)
-        } else {
-            intent.getParcelableExtra(FILM_KEY)
-        } ?: return
+        binding = FragmentDetailsBinding.inflate(requireActivity().layoutInflater)
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val film = arguments?.get(FILM_KEY) as Film
         renderUI(film)
         initToolBar()
     }
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        return binding.root
+    }
     private fun initToolBar() {
         binding.detailsToolbar.setOnMenuItemClickListener {
             when (it.itemId) {
@@ -32,8 +39,8 @@ class DetailsActivity : AppCompatActivity() {
                         binding.detailsLayout, "Добавлено в избранное",
                         Snackbar.LENGTH_SHORT
                     ).setAction("Action") {
-                        Toast.makeText(this, "Action", Toast.LENGTH_SHORT).show()
-                    }.setActionTextColor(ContextCompat.getColor(this, R.color.green)).show()
+                        Toast.makeText(requireContext(), "Action", Toast.LENGTH_SHORT).show()
+                    }.setActionTextColor(ContextCompat.getColor(requireContext(), R.color.green)).show()
                     true
                 }
 
