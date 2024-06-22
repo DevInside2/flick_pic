@@ -14,61 +14,61 @@ class HomeFragment : Fragment() {
     private val filmDataBase = listOf(
         Film(
             1,
-            "Pixels",
+            R.string.pixels_title,
             R.drawable.pixels,
             R.string.pixels_desc
         ),
         Film(
             2,
-            "Moonlight",
+            R.string.moonlight_title,
             R.drawable.moonlight,
             R.string.moonlight_desc
         ),
         Film(
             3,
-            "Predators",
+            R.string.predators_title,
             R.drawable.predators,
             R.string.predators_desc
         ),
         Film(
             4,
-            "Horrible bosses",
+            R.string.horrible_bosses_title,
             R.drawable.horrible_bosses,
             R.string.horrible_bosses_desc
         ),
         Film(
             5,
-            "Madea's witness protection",
+            R.string.madeas_witness_title,
             R.drawable.madeas_witness_protection,
             R.string.madeas_witness_protection_desc
         ),
         Film(
             6,
-            "Mr popper's penguins",
+            R.string.mr_popper_title,
             R.drawable.mr_poppers_penguins,
             R.string.mr_poppers_penguins_desc
         ),
         Film(
             7,
-            "Murder on the orient express",
+            R.string.murder_on_the_orient_express_title,
             R.drawable.murder_on_the_orient_express,
             R.string.murder_on_the_orient_express_desc
         ),
         Film(
             8,
-            "The dark knight rises bane",
+            R.string.the_dark_knight_rises_bane_title,
             R.drawable.the_dark_knight_rises_bane,
             R.string.the_dark_knight_rises_bane_desc
         ),
         Film(
             9,
-            "The intruder",
+            R.string.the_intruder_title,
             R.drawable.the_intruder,
             R.string.the_intruder_desc
         ),
         Film(
             10,
-            "Game of thrones",
+            R.string.game_of_thrones_title,
             R.drawable.game_of_thrones,
             R.string.game_of_thrones_desc
         )

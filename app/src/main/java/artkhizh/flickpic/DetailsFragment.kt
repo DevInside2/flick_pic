@@ -1,5 +1,6 @@
 package artkhizh.flickpic
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,15 +14,12 @@ import com.google.android.material.snackbar.Snackbar
 
 class DetailsFragment : Fragment() {
     private lateinit var binding: FragmentDetailsBinding
+    private lateinit var film: Film
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        @Suppress("DEPRECATION")
+        film = arguments?.getParcelable<Film>(FILM_KEY) as Film
         binding = FragmentDetailsBinding.inflate(requireActivity().layoutInflater)
-    }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val film = arguments?.get(FILM_KEY) as Film
-        renderUI(film)
-        initToolBar()
     }
 
     override fun onCreateView(
@@ -31,6 +29,48 @@ class DetailsFragment : Fragment() {
     ): View {
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        renderUI(film)
+        initToolBar()
+        initFavButton()
+        initShareButton()
+    }
+
+    private fun initShareButton() {
+        binding.detailsFabShare.setOnClickListener {
+            val intent = Intent()
+            intent.action = Intent.ACTION_SEND
+            intent.putExtra(
+                Intent.EXTRA_TEXT,
+                "Checkout this film: ${film.title} /n /n ${film.description}"
+            )
+            intent.type = "text/plain"
+            startActivity(Intent.createChooser(intent, "Share to:"))
+        }
+    }
+
+    private fun initFavButton() {
+        with(binding.detailsFabFavorites) {
+            setImageResource(
+                if (film.isInFavorites) R.drawable.baseline_favorite_24
+                else R.drawable.baseline_favorite_border_24
+            )
+            setOnClickListener {
+                if (!film.isInFavorites) {
+                    setImageResource(R.drawable.baseline_favorite_24)
+                    film.isInFavorites = true
+                    FavoritesManager.addFilm(film)
+                } else {
+                    setImageResource(R.drawable.baseline_favorite_border_24)
+                    film.isInFavorites = false
+                    FavoritesManager.removeFilm(film)
+                }
+            }
+        }
+    }
+
     private fun initToolBar() {
         binding.detailsToolbar.setOnMenuItemClickListener {
             when (it.itemId) {
@@ -40,7 +80,8 @@ class DetailsFragment : Fragment() {
                         Snackbar.LENGTH_SHORT
                     ).setAction("Action") {
                         Toast.makeText(requireContext(), "Action", Toast.LENGTH_SHORT).show()
-                    }.setActionTextColor(ContextCompat.getColor(requireContext(), R.color.green)).show()
+                    }.setActionTextColor(ContextCompat.getColor(requireContext(), R.color.green))
+                        .show()
                     true
                 }
 
@@ -62,7 +103,7 @@ class DetailsFragment : Fragment() {
         with(binding) {
             detailsPoster.setImageResource(film.poster)
             detailsDescription.setText(film.description)
-            detailsToolbar.title = film.title
+            detailsToolbar.setTitle(film.title)
         }
     }
 }

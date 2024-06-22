@@ -19,8 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             app:menu="@menu/top_app_bar"
-            app:navigationIcon="@drawable/ic_menu_24dp"
+            app:navigationIcon="@drawable/baseline_image_search_24"
             app:title="@string/app_name"
+            app:titleCentered="true"
             app:titleTextColor="@color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
