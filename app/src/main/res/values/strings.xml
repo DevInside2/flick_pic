@@ -46,6 +46,16 @@
         characters from the games.</string>
     <string name="https_www_movieposters_com">Постеры предоставлены https://www.movieposters.com/</string>
     <string name="menu_title">Меню</string>
+    <string name="pixels_title">Pixels</string>
+    <string name="moonlight_title">Moonlight</string>
+    <string name="predators_title">Predators</string>
+    <string name="horrible_bosses_title">Horrible bosses</string>
+    <string name="madeas_witness_title">Madea\'s witness protection</string>
+    <string name="mr_popper_title">Mr popper\'s penguins</string>
+    <string name="murder_on_the_orient_express_title">Murder on the orient express</string>
+    <string name="the_dark_knight_rises_bane_title">The dark knight rises bane</string>
+    <string name="the_intruder_title">The intruder</string>
+    <string name="game_of_thrones_title">Game of thrones</string>
     <string name="watch_later_title">Смотреть позже</string>
     <string name="collections_title">Коллекции</string>
     <string name="settings_title">Настройки</string>

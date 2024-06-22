@@ -1,7 +1,6 @@
 package artkhizh.flickpic
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -10,7 +9,6 @@ import artkhizh.flickpic.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private var isDarkMode = false
     private var backPressed = 0L
 
 
@@ -19,12 +17,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initNavigation()
+        toHomeFragment()
+        setupOnBackPressedListener()
+    }
+
+    private fun toHomeFragment() {
         supportFragmentManager
             .beginTransaction()
             .add(R.id.fragment_placeholder, HomeFragment())
             .addToBackStack(null)
             .commit()
-        setupOnBackPressedListener()
     }
 
     private fun setupOnBackPressedListener() {
@@ -33,11 +35,11 @@ class MainActivity : AppCompatActivity() {
                 if (supportFragmentManager.backStackEntryCount > 0) {
                     supportFragmentManager.popBackStack()
                 }
-                if(backPressed + TIME_INTERVAL > System.currentTimeMillis()) {
-                    Toast.makeText(this@MainActivity, "Bye", Toast.LENGTH_SHORT).show()
+                if (backPressed + TIME_INTERVAL > System.currentTimeMillis()) {
+                    showToast("Bye")
                     finish()
                 } else {
-                    Toast.makeText(this@MainActivity, "Double tap for exit", Toast.LENGTH_SHORT).show()
+                    showToast("double tap to exit")
                 }
                 backPressed = System.currentTimeMillis()
             }
@@ -54,17 +56,6 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
-                R.id.changeTheme -> {
-                    if (!isDarkMode) {
-                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                        isDarkMode = true
-                    } else {
-                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                        isDarkMode = false
-                    }
-                    true
-                }
-
                 else -> false
             }
         }
@@ -76,6 +67,11 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.itemFavorite -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragment_placeholder, FavoritesFragment())
+                        .addToBackStack(null)
+                        .commit()
                     showToast("Избранное")
                     true
                 }
@@ -107,7 +103,6 @@ class MainActivity : AppCompatActivity() {
             .addToBackStack(null)
             .commit()
     }
-
 
     companion object {
         const val FILM_KEY = "FILM_KEY"

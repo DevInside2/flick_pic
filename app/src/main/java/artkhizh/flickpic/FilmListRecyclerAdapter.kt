@@ -16,7 +16,7 @@ class FilmListRecyclerAdapter(private val clickListener: (item: Film) -> Unit) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(film: Film) {
             binding.poster.setImageResource(film.poster)
-            binding.title.text = film.title
+            binding.title.setText(film.title)
             binding.description.setText(film.description)
             binding.root.setOnClickListener {
                 clickListener(film)
