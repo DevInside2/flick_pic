@@ -6,12 +6,12 @@
     <color name="red">#FF0000</color>
     <color name="green">#44FF00</color>
     <color name="blue">#0088FF</color>
-    <color name="dark_blue">#013360</color>
-    <color name="dull_dark_blue">#537EA5</color>
+    <color name="dark_blue">#011759</color>
+    <color name="dull_dark_blue">#133C61</color>
     <color name="orange">#CF5B02</color>
     <color name="violet">#D100FF</color>
-    <color name="dark_violet">#5D0271</color>
-    <color name="dull_dark_violet">#694C70</color>
+    <color name="dark_violet">#260042</color>
+    <color name="dull_dark_violet">#3F0863</color>
     <color name="my_light_primary">#035ECD</color>
     <color name="my_dark_primary">#000B32</color>
 </resources>
